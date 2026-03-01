@@ -1,0 +1,99 @@
+.portfolio {
+  padding: var(--spacing-xl) 0;
+}
+
+.portfolio-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  font-family: var(--font-family-en);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--color-text-main);
+}
+
+.filter-btn:hover {
+  border-color: var(--color-text-main);
+}
+
+.filter-btn.active {
+  background: var(--color-text-main);
+  color: #fff;
+  border-color: var(--color-text-main);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.portfolio-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.portfolio-img-placeholder {
+  width: 100%;
+  aspect-ratio: 16/10;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+}
+
+.portfolio-card:hover .portfolio-img-placeholder {
+  transform: scale(1.05);
+}
+
+.portfolio-info {
+  padding: 2rem;
+  position: relative;
+  background: #fff;
+  z-index: 2;
+}
+
+.portfolio-category {
+  font-family: var(--font-family-en);
+  font-size: 0.8rem;
+  color: var(--color-text-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.portfolio-desc {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .portfolio-filters {
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+}

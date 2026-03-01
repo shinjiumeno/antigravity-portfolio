@@ -1,0 +1,61 @@
+/* 
+  Global Design Tokens & Resets for Portfolio
+  Inspired by modern, simple, and eye-catching aesthetics 
+*/
+:root {
+  --color-bg: #f2ede4; /* Warm off-white / beige */
+  --color-text-main: #111111;
+  --color-text-accent: #78909c; /* Soft blue-grey for English subtitles */
+  --color-accent-1: #ffd166; /* Muted yellow accent */
+  --color-accent-2: #ef476f; /* Muted pink accent */
+  --color-accent-3: #06d6a0; /* Muted green accent */
+  --color-accent-4: #118ab2; /* Light blue accent */
+
+  --font-family-main:
+    "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    Meiryo, sans-serif;
+  --font-family-en: "Inter", "Helvetica Neue", Arial, sans-serif;
+
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-main);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Base utility classes for layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.section {
+  padding: var(--spacing-xl) 0;
+}

@@ -1,0 +1,64 @@
+.header {
+  position: fixed;
+  top: 2rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  pointer-events: none; /* Let clicks pass through header area */
+}
+
+.header-capsule {
+  pointer-events: auto; /* Re-enable clicks for the capsule */
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  font-family: var(--font-family-en);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--color-accent-4);
+}
+
+@media (max-width: 768px) {
+  .header-capsule {
+    padding: 0.5rem 1.5rem;
+    gap: 1.5rem;
+  }
+  .nav ul {
+    gap: 1rem;
+  }
+  .nav a {
+    font-size: 0.8rem;
+  }
+}
